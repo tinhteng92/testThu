@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let diemThi = [6 ,8 ,9 ,5, 10]
+    let max1 = 0
+    let max2 = 0
+    let max3 = 0;
+    function findMax3(diemThi) {
+        for (let i = 0; i < diemThi.length; i++ ){
+           if (max1 <= diemThi[i]){
+               max1 = diemThi[i];
+           }
+        }
+
+        for (let i = 0; i < diemThi.length; i++ ){
+            if ( max1 === diemThi[i]){
+                continue;
+            }else if (max2 <= diemThi[i]){
+                max2 = diemThi[i];
+            }
+        }
+
+        for (let i = 0; i < diemThi.length; i++ ){
+            if ( max1 === diemThi[i] || max2 === diemThi[i] ){
+                continue;
+            }else if (max3 <= diemThi[i]){
+                max3 = diemThi[i];
+            }
+        }
+        alert("điểm lớn thứ 3 là: " + max3);
+    }
+    findMax3(diemThi);
+</script>
