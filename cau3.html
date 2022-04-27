@@ -10,16 +10,21 @@
 </html>
 <script>
 
-    function check(a,b){
-        for (let i = 0; i< string2.length; i++){
-            if (string2.indexOf(b) !== -1){
-                return true
+    function check(str2,str1){
+        let str3 = "";
+        for (let i = 0; i< str2.length; i++){
+            if (str1[0] === str2[i]){
+                str3 = str2.slice(i, str1.length);
+                if (str1 === str3){
+                    return true;
+                }
             }
             }
-        return false
+        return false;
         }
 
+    let string1 = "hôm" ;
     let string2 = "hôm nay là thứ 5";
-    let string1 = "trang"
+
     alert(check(string2, string1));
 </script>
